@@ -1,0 +1,79 @@
+!Issues
+
+[SOLVED] Cannot locate QueryView | IDE > View > QueryView
+Cannot locate suneido.db file
+Detailed syntax errors?
+Copy pasted functions from documents don't work sometimes
+
+--------------------------------------------------------------------------------------------
+# Declaring a function
+
+	func = function(parameters)
+	
+	if parameters = @args then you can pass as many params as you want
+
+	=> Example function
+	func = function(x,y)
+	{
+		return x + y
+	}
+  	
+	Calling the function
+		func(1,2) => 3
+
+# String slicing
+	str = "hello world"
+
+	.Substr(args) to get a substring (Upper bound exclusive like Python)
+
+	str.Substr(0,10) => "hello worl"
+	str.Substr(10) => "d" # All the characters from the 10th index to the end
+	str.Substr(6,5) => "world" # From 6th index to the end
+	str.Substr(8,5) => "rld" # From 8th index to the end
+
+	What doesn't make sense?
+
+		str.Substr(5,6) => " world" # I feel it should be just the index 5
+
+		I think it accepts first argument as initial index and the last index to be the length of the string
+	
+	!Figure out how to get one element of the string
+
+# Maps and Objects
+
+	Declaring dictionaries (Im just calling them Python dictionaries)
+
+	dict = Object(name : "Jane", age : 20, married : true)
+	Print(dict.name) => "Jane"
+	dict.name = "John" # same as dict[name] = "John"
+	Print(dict.name) => "John"
+
+	# The dictionary works even if the keys aren't explicitly defined as strings
+
+	! Cannot add/ delete keys from the Object once it is declared
+
+# Exception
+
+	throw "ERROR message"
+
+	try
+	catch
+
+# Assignment
+
+	a++  | a+=1
+	a--  | a-=1
+	a*=1 | a/=1
+	
+	All of the above are valid assignment operators
+
+# Database
+
+	create customer(name,location) => @ create customer(name,location)
+	insert {name: "Jane", location : "Canada" } into customer
+
+	!Throws a syntax error
+
+
+
+
