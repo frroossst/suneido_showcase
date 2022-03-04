@@ -7,7 +7,7 @@ Copy pasted functions from documents don't work sometimes
 [SOLVED] Take user input from console | It is not possible
 [SOLVED] String length | help > Language > Reference > String
 [SOLVED] Latest GO installation |  https://github.com/apmckinlay/gsuneido/releases
-File I/O?
+[SOLVED] File I/O?
 
 --------------------------------------------------------------------------------------------
 # Declaring a function
@@ -82,6 +82,6 @@ File I/O?
 
 	!Throws a syntax error
 
-
+# Language > Reference => for syntax and methods
 
 

@@ -26,3 +26,13 @@ halt = function(str){
 
 str = "while true: print('Hello World') \n if i < 10: \ continue"
 doesHalt = halt(str)
+
+// Str eval calc
+
+// File I/O
+
+//  Recursion fac!
+
+// Pathfinding algo
+
+// Console I/O
