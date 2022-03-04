@@ -4,9 +4,10 @@
 [SOLVED] Cannot locate suneido.db file | Windows hides file extensions by default
 [SOLVED] Detailed syntax errors? | IDE > View > LibView
 Copy pasted functions from documents don't work sometimes
-Take user input from console?
-String length?
-Latest GO installation?
+[SOLVED] Take user input from console | It is not possible
+[SOLVED] String length | help > Language > Reference > String
+[SOLVED] Latest GO installation |  https://github.com/apmckinlay/gsuneido/releases
+File I/O?
 
 --------------------------------------------------------------------------------------------
 # Declaring a function

@@ -1,48 +1,62 @@
-CanvasLine
-class
-    {
-    New(x1, y1, x2, y2)
-        {
-        .x1 = x1
-        .y1 = y1
-        .x2 = x2
-        .y2 = y2
-        }
-    Paint(hdc)
-        {
-        MoveTo(hdc, .x1, .y1)
-        LineTo(hdc, .x2, .y2)
-        }
-    }
+// Basic Calculator
+add = function(a,b) {
+	sum = a + b
+	return sum
+}
 
-CanvasRectangle
-class
-    {
-    New(left, top, right, bottom)
-        {
-        .left = left
-        .top = top
-        .right = right
-        .bottom = bottom
-        }
-    Paint(hdc)
-        {
-        Rectangle(hdc, .left, .top, .right, .bottom)
-        }
-    }
+subtract = function(a,b) {
+	difference = a + b
+	return difference
+	}
 
-CanvasEllipse
-class
-    {
-    New(left, top, right, bottom)
-        {
-        .left = left
-        .top = top
-        .right = right
-        .bottom = bottom
-        }
-    Paint(hdc)
-        {
-        Ellipse(hdc, .left, .top, .right, .bottom)
-        }
-    }
+divide = function(a,b) {
+	quotient = a / b
+	return quotient
+	}
+
+multiply = function(a,b) {
+	product = a * b
+	return product
+	}
+
+a = 10 // First number
+o = "*" // Mathematical Operator
+b = 11 // Second number
+
+if (o == "+")
+	ans = add(a,b)
+if (o == "-")
+	ans = subtract(a,b)
+if (o == "/")
+	ans = divide(a,b)
+if (o == "*")
+	ans = multiply(a,b)
+// Print(ans)
+
+// Halting Machine
+halt = function(str){
+	str.Trim()
+	if (str.Has?("break"))
+		return true
+	
+	col_pos = str.Find(":")
+	str_temp = str[0..col_pos + 1]
+	
+	lessthan_pos = str_temp.Find("<")
+	greaterthan_pos = str_temp.Find(">")
+	equals_pos = str_temp.Find("==")
+	len_str_temp = str_temp.Size()
+	
+	if (lessthan_pos <= len_str_temp)
+		return true
+	else if (greaterthan_pos <= len_str_temp)
+		return true
+	else if (equals_pos <= len_str_temp)
+		return true
+	else
+		return false
+		
+	}
+
+str = "while true: print('Hello World') \n if i < 10: \ continue"
+doesHalt = halt(str)
