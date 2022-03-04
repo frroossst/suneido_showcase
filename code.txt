@@ -1,39 +1,3 @@
-// Basic Calculator
-add = function(a,b) {
-	sum = a + b
-	return sum
-}
-
-subtract = function(a,b) {
-	difference = a + b
-	return difference
-	}
-
-divide = function(a,b) {
-	quotient = a / b
-	return quotient
-	}
-
-multiply = function(a,b) {
-	product = a * b
-	return product
-	}
-
-a = 10 // First number
-o = "*" // Mathematical Operator
-b = 11 // Second number
-
-if (o == "+")
-	ans = add(a,b)
-if (o == "-")
-	ans = subtract(a,b)
-if (o == "/")
-	ans = divide(a,b)
-if (o == "*")
-	ans = multiply(a,b)
-// Print(ans)
-
-// Halting Machine
 halt = function(str){
 	str.Trim()
 	if (str.Has?("break"))
@@ -41,17 +5,19 @@ halt = function(str){
 	
 	col_pos = str.Find(":")
 	str_temp = str[0..col_pos + 1]
-	
+	Print(str_temp)
 	lessthan_pos = str_temp.Find("<")
 	greaterthan_pos = str_temp.Find(">")
 	equals_pos = str_temp.Find("==")
 	len_str_temp = str_temp.Size()
 	
-	if (lessthan_pos <= len_str_temp)
+	Print(lessthan_pos,greaterthan_pos,equals_pos,len_str_temp)
+	
+	if (lessthan_pos < len_str_temp)
 		return true
-	else if (greaterthan_pos <= len_str_temp)
+	else if (greaterthan_pos < len_str_temp)
 		return true
-	else if (equals_pos <= len_str_temp)
+	else if (equals_pos < len_str_temp)
 		return true
 	else
 		return false
