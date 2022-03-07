@@ -1,3 +1,45 @@
+// FizzBuzz
+n = 50
+for (i=1;i<n;i++)
+	if (i % 15 == 0)
+		Print("FizzBuzz")
+	else if (i % 3 == 0)
+		Print("Fizz")
+	else if (i % 5 == 0)
+		Print("Buzz")
+	else
+		Print(i)
+
+// Psuedo Random Number Generator (using mid square method)
+prng = function(seed)
+{
+	seed0 = seed
+	for (i=0;i<10;i++){
+		sq = seed0 * seed0
+		sq_str = String(sq)
+		if (sq_str.Size() <= 9){
+			seed0 = Number(sq_str)
+			seed0 = seed0 * seed0}
+		else
+			{
+			sq_str = sq_str
+			div = sq_str.Size() / 3
+			spl = div.RoundDown(0)
+			// len = Number(sq_str.Size() / 3).RoundDown(0)
+			sq_str = sq_str[spl..sq_str.Size()-spl]
+			new_sq = sq_str
+			seed0 = Number(new_sq)}
+									
+	}
+	return (String(seed0)[..5])
+}
+a = prng(9999999999)
+Print(a)
+
+// Factorial
+
+
+// Using basic lexical analysis to see if a piece of Python code halts or not (inspired by VSCode)
 halt = function(str){
 	str.Trim()
 	if (str.Has?("break"))
@@ -26,3 +68,17 @@ halt = function(str){
 
 str = "while true: print('Hello World') \n if i < 10: \ continue"
 doesHalt = halt(str)
+
+//[DOES NOT WORK] Console Equation Calculator
+c = Console()
+c.SetTitle("Calculator")
+
+while (true){
+c.Write("enter 'end' to quit")
+c.Write("enter an equation : ")
+eq = c.Readline()
+if (eq == "end")
+	Print("the user quit")
+	c.Close()
+eq_solved = eq.Eval2()
+c.Write("the answer is"$ eq_solved)}
