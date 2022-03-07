@@ -1,6 +1,6 @@
 // FizzBuzz
 n = 50
-.for (i=1;i<n;i++)
+for (i=1;i<n;i++)
 	if (i % 15 == 0)
 		Print("FizzBuzz")
 	else if (i % 3 == 0)
@@ -99,6 +99,8 @@ fac = function(n){
 a = fac(2)
 Print(a)*/
 
+
+
 // Using basic lexical analysis to see if a piece of Python code halts or not (inspired by VSCode)
 halt = function(str){
 	str.Trim()
@@ -132,6 +134,9 @@ doesHalt = halt(str)
 // Schedule Explorer
 
 
+
+// Basic Encryption
+Caesar, Monoalphabetic substitution, Vigenère, Playfair, Four Square
 
 
 // Basic Calculator
