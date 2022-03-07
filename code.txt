@@ -69,6 +69,7 @@ halt = function(str){
 str = "while true: print('Hello World') \n if i < 10: \ continue"
 doesHalt = halt(str)
 
+<<<<<<< HEAD
 //[DOES NOT WORK] Console Equation Calculator
 c = Console()
 c.SetTitle("Calculator")
@@ -82,3 +83,14 @@ if (eq == "end")
 	c.Close()
 eq_solved = eq.Eval2()
 c.Write("the answer is"$ eq_solved)}
+=======
+// Str eval calc
+
+// File I/O
+
+//  Recursion fac!
+
+// Pathfinding algo
+
+// Console I/O
+>>>>>>> 40894e05c16c2acfc09b58986ad31d45a4c47c5f
