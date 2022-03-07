@@ -1,6 +1,6 @@
 // FizzBuzz
 n = 50
-for (i=1;i<n;i++)
+.for (i=1;i<n;i++)
 	if (i % 15 == 0)
 		Print("FizzBuzz")
 	else if (i % 3 == 0)
@@ -9,6 +9,8 @@ for (i=1;i<n;i++)
 		Print("Buzz")
 	else
 		Print(i)
+
+
 
 // Psuedo Random Number Generator (using mid square method)
 prng = function(seed)
@@ -36,8 +38,66 @@ prng = function(seed)
 a = prng(9999999999)
 Print(a)
 
-// Factorial
 
+
+// Truth Tables
+/* In a file called tt.txt just type and/or/not/xor/nand/nor/xnor 
+and it will be replaced with the respective truth table*/
+
+fobj = File("tt.txt","r")
+content = fobj.Read()
+fobj.Close()
+
+if (content == "and")
+	str_bin = "1 1 | 1 \n0 0 | 0 \n1 0 | 0 \n0 1 | 0"
+	str_tf = "True True | True \nFalse False | False \nTrue False | False \nFalse True | False"
+			   
+else if (content == "or")
+	str_bin = "1 1| 1 \n 0 0 | 0 \n1 0 | 1 \n 0 1 | 1"
+	str_tf = "True True | True \nFalse False | False \nTrue False | True \nFalse True | True"
+	
+else if (content == "not")
+	str_bin = "1 | 0 \n0 | 1"
+	str_tf = "True | False \nFalse | True"
+
+else if (content == "nor")
+	str_bin = "1 1| 0 \n 0 0 | 1 \n1 0 | 0 \n 0 1 | 0"
+	str_tf = "True True | False \nFalse False | True \nTrue False | False \nFalse True | False"
+
+else if (content == "nand")
+	str_bin = "1 1 | 0 \n0 0 | 1 \n1 0 | 1 \n0 1 | 1"
+	str_tf = "True True | False \nFalse False | True \nTrue False | True \nFalse True | True"
+	
+else if (content == "xor")
+	str_bin = "1 1 | 1 \n0 0 | 1 \n1 0 | 0 \n0 1 | 0"
+	str_tf = "True True | True \nFalse False | True \nTrue False | False \nFalse True | False"
+
+else if (content == "xnor")
+	str_bin = "1 1 | 1 \n0 0 | 1 \n1 0 | 0 \n0 1 | 0"
+	str_tf = "True True | True \nFalse False | True \nTrue False | False \nFalse True | False"
+			   
+fobj = File("tt.txt","w")
+fobj.Write(str_bin)
+fobj.Write("\n")
+fobj.Write("\n")
+fobj.Write(str_tf)
+fobj.Close()
+
+
+
+// Factorial
+// [recursion DOES NOT WORK]
+fac = function(n){
+	if (n == 0){
+		throw ("cannot compute factorial for zero")}
+	if (n == 1){
+		return n}
+	else {
+		return n*fac(n-1)}
+	}
+
+a = fac(2)
+Print(a)*/
 
 // Using basic lexical analysis to see if a piece of Python code halts or not (inspired by VSCode)
 halt = function(str){
@@ -69,7 +129,48 @@ halt = function(str){
 str = "while true: print('Hello World') \n if i < 10: \ continue"
 doesHalt = halt(str)
 
-<<<<<<< HEAD
+// Schedule Explorer
+
+
+
+
+// Basic Calculator
+add = function(a,b) {
+	sum = a + b
+	return sum
+}
+
+subtract = function(a,b) {
+	difference = a + b
+	return difference
+	}
+
+divide = function(a,b) {
+	quotient = a / b
+	return quotient
+	}
+
+multiply = function(a,b) {
+	product = a * b
+	return product
+	}
+
+a = 10 // First number
+o = "*" // Mathematical Operator
+b = 11 // Second number
+
+if (o == "+")
+	ans = add(a,b)
+if (o == "-")
+	ans = subtract(a,b)
+if (o == "/")
+	ans = divide(a,b)
+if (o == "*")
+	ans = multiply(a,b)
+Print(ans)
+
+
+
 //[DOES NOT WORK] Console Equation Calculator
 c = Console()
 c.SetTitle("Calculator")
@@ -83,14 +184,3 @@ if (eq == "end")
 	c.Close()
 eq_solved = eq.Eval2()
 c.Write("the answer is"$ eq_solved)}
-=======
-// Str eval calc
-
-// File I/O
-
-//  Recursion fac!
-
-// Pathfinding algo
-
-// Console I/O
->>>>>>> 40894e05c16c2acfc09b58986ad31d45a4c47c5f
