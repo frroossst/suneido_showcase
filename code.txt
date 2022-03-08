@@ -218,6 +218,24 @@ rockpaper = function(p1,p2){
 a = rockpaper("rock","scissors")
 Print(a)
 
+// Permutation and Combination
+perm_comb = function (a,b) {
+		
+		for(i=0;i<a;i++){
+			for(j=0;j<b;j++){
+				Print(i,j)
+				} 
+			}
+		
+			
+				
+					
+						
+	}
+
+perm_comb(10,5)
+
+
 //[DOES NOT WORK] Console Equation Calculator
 c = Console()
 c.SetTitle("Calculator")
