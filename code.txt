@@ -131,9 +131,6 @@ halt = function(str){
 str = "while true: print('Hello World') \n if i < 10: \ continue"
 doesHalt = halt(str)
 
-// Schedule Explorer
-
-
 
 // Basic Encryption
 
@@ -202,6 +199,24 @@ if (o == "*")
 Print(ans)
 
 
+// Rock, Paper, Scissors, Lizard, Spock
+
+rockpaper = function(p1,p2){
+	p2win = Object (rock : "paper",paper : "scissors",scissors : "rock")
+	
+	if (p1 == p2){
+		return 0 }
+	
+	else if (p2win[p1] == p2){
+		return 2}
+			
+	else
+		return 1		
+								
+	}
+
+a = rockpaper("rock","scissors")
+Print(a)
 
 //[DOES NOT WORK] Console Equation Calculator
 c = Console()
