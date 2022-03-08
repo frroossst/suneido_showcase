@@ -1,4 +1,7 @@
+/* Adhyan H. --- Suneido Showcase Project --- */
+
 // FizzBuzz
+/* The classic FizzBuzz program */
 n = 50
 for (i=1;i<n;i++)
 	if (i % 15 == 0)
@@ -12,11 +15,16 @@ for (i=1;i<n;i++)
 
 
 
-// Psuedo Random Number Generator (using mid square method)
-prng = function(seed)
+// Psuedo Random Number Generator
+/* Generates a psuedo random number using the middle square method, the function
+takes two inputs seed and z. Seed is the initial seed upon which the algorithm runs.
+z is the length of the ouput of the psuedo random number. steps is the number of time
+the algorithm runs */
+
+prng = function(seed,z,steps)
 {
 	seed0 = seed
-	for (i=0;i<10;i++){
+	for (i=0;i<steps;i++){
 		sq = seed0 * seed0
 		sq_str = String(sq)
 		if (sq_str.Size() <= 9){
@@ -33,16 +41,16 @@ prng = function(seed)
 			seed0 = Number(new_sq)}
 									
 	}
-	return (String(seed0)[..5])
+	return (String(seed0)[..z])
 }
-a = prng(9999999999)
+a = prng(9999999999,2,123)
 Print(a)
 
 
 
 // Truth Tables
 /* In a file called tt.txt just type and/or/not/xor/nand/nor/xnor 
-and it will be replaced with the respective truth table*/
+and it will be replaced with the respective truth table(s)*/
 
 fobj = File("tt.txt","r")
 content = fobj.Read()
@@ -97,11 +105,14 @@ fac = function(n){
 	}
 
 a = fac(2)
-Print(a)*/
+Print(a)
 
 
 
-// Using basic lexical analysis to see if a piece of Python code halts or not (inspired by VSCode)
+// Code Halting Checker
+/* Using basic lexical analysis to see if a piece of Python code halts or not
+(inspired by VSCode) NOTE : This does not check for the syntax of string passed*/
+
 halt = function(str){
 	str.Trim()
 	if (str.Has?("break"))
@@ -109,13 +120,13 @@ halt = function(str){
 	
 	col_pos = str.Find(":")
 	str_temp = str[0..col_pos + 1]
-	Print(str_temp)
+	//Print(str_temp)
 	lessthan_pos = str_temp.Find("<")
 	greaterthan_pos = str_temp.Find(">")
 	equals_pos = str_temp.Find("==")
 	len_str_temp = str_temp.Size()
 	
-	Print(lessthan_pos,greaterthan_pos,equals_pos,len_str_temp)
+	//Print(lessthan_pos,greaterthan_pos,equals_pos,len_str_temp)
 	
 	if (lessthan_pos < len_str_temp)
 		return true
@@ -132,7 +143,13 @@ str = "while true: print('Hello World') \n if i < 10: \ continue"
 doesHalt = halt(str)
 
 
+
 // Basic Encryption
+
+/* Uses a basic caeser cypher to return an encrypted string, the input can contain
+spaces but cannot contain special characters. It takes two inputs inp, and shift, inp
+is the string that is to be encrypted whereas, shift is the number by which the caesar
+cypher must be shifted. For Example a shift of 2 transforms a => c */
 
 caesar = function(inp, shift) {
 		alphabet = Object (a:1,b:2,c:3,d:4,e:5,f:6,g:7,h:8,i:9,j:10,k:11,l:12,m:13,n:14,
@@ -160,17 +177,20 @@ caesar = function(inp, shift) {
 		return (enc)
 	}
 
-a= caesar("Hello World",2)
+a= caesar("Hello World abc xyz",2)
 Print(a)
 
+
+
 // Basic Calculator
+
 add = function(a,b) {
 	sum = a + b
 	return sum
 }
 
 subtract = function(a,b) {
-	difference = a + b
+	difference = a - b
 	return difference
 	}
 
@@ -199,7 +219,9 @@ if (o == "*")
 Print(ans)
 
 
+
 // Rock, Paper, Scissors, Lizard, Spock
+/* returns 0 if it is a tie, 1 is player one wins and 2 if player two wins */
 
 rockpaper = function(p1,p2){
 	p2win = Object (rock : "paper",paper : "scissors",scissors : "rock")
@@ -218,22 +240,23 @@ rockpaper = function(p1,p2){
 a = rockpaper("rock","scissors")
 Print(a)
 
+
+
 // Permutation and Combination
+/* It takes two inputs and returns a combination of the range from zero to the numbers
+passed as arugments */ 
+
 perm_comb = function (a,b) {
 		
 		for(i=0;i<a;i++){
 			for(j=0;j<b;j++){
 				Print(i,j)
 				} 
-			}
-		
-			
-				
-					
-						
+			}						
 	}
 
 perm_comb(10,5)
+
 
 
 //[DOES NOT WORK] Console Equation Calculator
