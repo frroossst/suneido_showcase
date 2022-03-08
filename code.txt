@@ -136,8 +136,35 @@ doesHalt = halt(str)
 
 
 // Basic Encryption
-Caesar, Monoalphabetic substitution, Vigenère, Playfair, Four Square
 
+caesar = function(inp, shift) {
+		alphabet = Object (a:1,b:2,c:3,d:4,e:5,f:6,g:7,h:8,i:9,j:10,k:11,l:12,m:13,n:14,
+			o:15,p:16,q:17,r:18,s:19,t:20,u:21,v:22,w:23,x:24,y:25,z:26)
+		enc = ""
+		for (i=0;i<inp.Size();i++){
+				
+				if not(inp[i] == " "){
+			
+					pos = alphabet[inp[i].Lower()]
+			
+					pos = pos + shift
+			
+					if (pos > 26){
+						pos = pos - 26 }
+				
+					newLetter = alphabet.Find(pos)}
+				else
+					newLetter = inp[i]
+			
+			
+			enc = enc $ newLetter
+
+			}
+		return (enc)
+	}
+
+a= caesar("Hello World",2)
+Print(a)
 
 // Basic Calculator
 add = function(a,b) {
